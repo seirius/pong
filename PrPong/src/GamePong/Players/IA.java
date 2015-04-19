@@ -6,11 +6,10 @@ public class IA {
 	private EvolutiveIA evo;
 
 	public IA() {
-		evo = new EvolutiveIA(6, 3);
+		evo = new EvolutiveIA(4, 3);
 	}
 
 	public int getNext(int bolaX, int bolaY, int stickX, int stickY) {
-		int out = 0;
 		ArrayList<Double> inputs = new ArrayList<Double>();
 		inputs.add((double) bolaX);
 		inputs.add((double) bolaY);

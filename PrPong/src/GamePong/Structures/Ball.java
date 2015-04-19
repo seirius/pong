@@ -46,6 +46,10 @@ public class Ball {
 		ballArea.setLocation((int) xPos, (int) yPos);
 	}
 	
+	public Rectangle getBallArea() {
+		return ballArea;
+	}
+
 	public void render(Graphics g) {
 		g.setColor(Color.WHITE);
 		g.fillOval(ballArea.x, ballArea.y, ballWidth, ballHeight);

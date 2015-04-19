@@ -24,6 +24,10 @@ public class Stick {
 		}
 	}
 	
+	public Rectangle getStickArea() {
+		return stickArea;
+	}
+
 	public void refresh(int input) {
 		moveStick(input);
 	}
