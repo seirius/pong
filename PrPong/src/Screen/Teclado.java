@@ -6,24 +6,25 @@ import java.awt.event.KeyListener;
 public class Teclado implements KeyListener{
 
 	private boolean[] keys = new boolean[256];
-	public boolean up, down, left, right;
-	public boolean air;
-	public boolean directionUp, directionDown, directionLeft, directionRight;
+	public boolean up, down;
 	
-	int cont = 0;
+	public void refresh() {
+		getState();
+	}
 	
-	public void update() {
+	public int getState() {
 		up = keys[KeyEvent.VK_W];
 		down = keys[KeyEvent.VK_S];
-		left = keys[KeyEvent.VK_A];
-		right = keys[KeyEvent.VK_D];
 		
-		air = keys[KeyEvent.VK_F];
-		
-		directionUp = keys[KeyEvent.VK_UP];
-		directionDown = keys[KeyEvent.VK_DOWN];
-		directionLeft = keys[KeyEvent.VK_LEFT];
-		directionRight = keys[KeyEvent.VK_RIGHT];
+		if (up) {
+			return 0;
+		}
+		else if (down) {
+			return 1;
+		}
+		else {
+			return 2;
+		}
 	}
 	
 	public void keyPressed(KeyEvent e) {
