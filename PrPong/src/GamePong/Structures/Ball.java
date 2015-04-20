@@ -20,7 +20,7 @@ public class Ball {
 		ballArea = new Rectangle((int) Xdir, (int) Ydir, ballWidth, ballHeight);
 	}
 	
-	public choque(int where){
+	public void choque(int where){
 		switch (where) {
 		case 0:
 				
